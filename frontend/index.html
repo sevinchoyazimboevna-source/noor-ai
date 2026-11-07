@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#08111f" />
+    <title>NOOR AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="NOOR AI home"><span class="brand-mark">N</span><span>NOOR <span class="brand-muted">AI</span></span></a>
+        <div class="status"><i></i><span id="statusText">Checking AI...</span></div>
+        <button id="clearButton" class="ghost-button" type="button">Clear chat</button>
+      </header>
+
+      <section id="chat" class="chat" aria-live="polite">
+        <div class="welcome" id="welcome">
+          <div class="orb">✦</div>
+          <p class="eyebrow">YOUR ENGLISH AI ASSISTANT</p>
+          <h1>How can I help you today?</h1>
+          <p class="welcome-copy">Ask about coding, study, writing, career plans, or anything you want to understand.</p>
+          <div class="suggestions">
+            <button type="button" data-prompt="Explain React hooks with a simple example.">Explain React hooks</button>
+            <button type="button" data-prompt="Make a one-week English study plan for a beginner.">Plan my English study</button>
+            <button type="button" data-prompt="Review this idea and tell me how to improve it: ">Improve my idea</button>
+          </div>
+        </div>
+      </section>
+
+      <form id="composer" class="composer">
+        <textarea id="prompt" rows="1" maxlength="12000" placeholder="Message NOOR AI..." aria-label="Message NOOR AI"></textarea>
+        <button id="sendButton" class="send-button" type="submit" aria-label="Send message">↑</button>
+      </form>
+      <p class="note">NOOR AI can make mistakes. Check important information.</p>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
